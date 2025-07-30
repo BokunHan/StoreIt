@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import { Account, Avatars, Client, Databases, Storage } from "node-appwrite";
 import { appwriteConfig } from "@/lib/appwrite/config";
