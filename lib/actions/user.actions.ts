@@ -84,7 +84,7 @@ export const verifySecret = async ({
     (await cookies()).set("appwrite-session", session.secret, {
       path: "/",
       httpOnly: false,
-      sameSite: "strict",
+      sameSite: "none",
       secure: true,
     });
 
