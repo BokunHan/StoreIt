@@ -14,13 +14,11 @@ export const createSessionClient = async () => {
     console.log(`index.ts session: ${JSON.stringify(session)}`);
 
     // if (!session || !session.value) throw new Error("No session");
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    client.setSession(session.value);
+    if (session)
+      client.setSession(session.value);
 
   } catch (error) {
-    console.log(error, "Failed to verify OTP");
+    console.log(error, "Failed to create session client");
   }
 
   return {
