@@ -99,8 +99,8 @@ git clone https://github.com/JavaScript-Mastery-Pro/storage_management_solution.
 cd storage_management_solution
 ```
 
-**Installation**
-
+**Installation**_
+_
 Install the project dependencies using npm:
 
 ```bash
@@ -1072,5 +1072,6 @@ detailed explanations, cool features, and exercises to boost your skills. Give i
 
 <a href="https://jsm.dev/gdrive-jsmpro" target="_blank">
   <img src="public/readme/jsmpro.png" alt="Project Banner">
-</a>#   S t o r e I t  
+</a>#   S t o r e I t 
+ 
  
