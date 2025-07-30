@@ -6,15 +6,22 @@ import { cookies } from "next/headers";
 
 export const createSessionClient = async () => {
   const client = new Client()
-    .setEndpoint(appwriteConfig.endpointUrl)
-    .setProject(appwriteConfig.projectId);
+      .setEndpoint(appwriteConfig.endpointUrl)
+      .setProject(appwriteConfig.projectId);
+  try {
+    const cookie = await cookies();
+    const session = cookie.get("appwrite-session");
+    console.log(`index.ts session: ${JSON.stringify(session)}`);
 
-  const session = (await cookies()).get("appwrite-session");
-  console.log(`session: ${JSON.stringify(session)}`);
+    // if (!session || !session.value) throw new Error("No session");
 
-  if (!session || !session.value) throw new Error("No session");
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    client.setSession(session.value);
 
-  client.setSession(session.value);
+  } catch (error) {
+    console.log(error, "Failed to verify OTP");
+  }
 
   return {
     get account() {
