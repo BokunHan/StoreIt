@@ -1072,4 +1072,5 @@ detailed explanations, cool features, and exercises to boost your skills. Give i
 
 <a href="https://jsm.dev/gdrive-jsmpro" target="_blank">
   <img src="public/readme/jsmpro.png" alt="Project Banner">
-</a>
+</a>#   S t o r e I t  
+ 
