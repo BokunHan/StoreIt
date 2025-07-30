@@ -1,4 +1,4 @@
-"use client";
+"use server";
 
 import { Account, Avatars, Client, Databases, Storage } from "node-appwrite";
 import { appwriteConfig } from "@/lib/appwrite/config";
@@ -11,7 +11,7 @@ export const createSessionClient = async () => {
   try {
     const cookie = await cookies();
     const session = cookie.get("appwrite-session");
-    console.log(`index.ts session: ${JSON.stringify(session)}`);
+    console.log(`index.ts session: ${session}`);
 
     // if (!session || !session.value) throw new Error("No session");
     if (session)
